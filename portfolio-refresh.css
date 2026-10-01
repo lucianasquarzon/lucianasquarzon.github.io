@@ -57,7 +57,9 @@ footer{padding-bottom:100px}
 @media(min-width:561px){footer>span:last-child{margin-right:160px}}
 /* Requested October content layout and image-control spacing. */
 #operaciones .stats{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-.resource-grid{grid-template-columns:minmax(0,320px) minmax(0,1fr);align-items:center}
+.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.resource-grid+.resource-grid{margin-top:30px}
+.resource-grid .image-open img{height:clamp(300px,45vw,560px);object-fit:contain;object-position:top}
 .image-open::after{top:12px;right:12px;bottom:auto}
 .resource-grid .image-open{padding-top:48px;background:var(--paper)}
 @media(max-width:560px){.resource-grid{grid-template-columns:1fr}}
